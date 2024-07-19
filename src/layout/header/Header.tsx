@@ -13,7 +13,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background-color: #a7f0dc;
+  background-color: #def4ee;
   display: flex;
   justify-content: space-between;
   padding: 5px 25px;

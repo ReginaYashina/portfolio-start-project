@@ -29,7 +29,7 @@ const Photo = styled.img`
 `;
 const StyledMain = styled.div`
   min-height: 100vh;
-  background-color: #91b2ef;
+  background-color: #c3d3f2;
 `;
 
 const MainTitle = styled.h1`
