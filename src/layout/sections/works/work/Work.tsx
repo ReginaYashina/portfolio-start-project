@@ -1,25 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const Work = () => {
+type WorkPropsType = {
+  src: string;
+  title: string;
+  text: string;
+}
+
+
+export const Work = (props: WorkPropsType) => {
   return (
     <StyledWork>
-      <Image src='' alt='' />
-      <Title>Social Network</Title>
-      <Text>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit.
-      </Text>
-      <Link></Link>
-      <Link></Link>
+      <Image src={props.src} alt='' />
+      <Title>{props.title}</Title>
+      <Text>{props.text}</Text>
+      <Link href=''>demo</Link>
+      <Link href=''>code</Link>
     </StyledWork>
   );
 };
 
-const StyledWork = styled.div``;
+const StyledWork = styled.div`
+  background-color: #bdf8c8;
+  max-width: 540px;
+  width: 100%;
+`;
 
-const Image = styled.img``;
+const Image = styled.img`
+  width: 100%;
+  height: 260px;
+`;
 
 const Title = styled.h3``;
 
