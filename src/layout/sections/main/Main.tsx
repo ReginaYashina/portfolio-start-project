@@ -1,14 +1,14 @@
-import React from "react";
-import photo from "../../../assets/img/photo.jpg";
-import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { stopCoverage } from "v8";
-import { stderr } from "process";
+import React from 'react';
+import photo from '../../../assets/img/photo.jpg';
+import styled from 'styled-components';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import { stopCoverage } from 'v8';
+import { stderr } from 'process';
 
 export const Main = () => {
   return (
     <StyledMain>
-      <FlexWrapper justify={"space-around"} align={"center"}>
+      <FlexWrapper justify={'space-around'} align={'center'}>
         <div>
           <Descrription>Hi There</Descrription>
           <Name>
@@ -27,7 +27,7 @@ const Photo = styled.img`
   height: 430px;
   object-fit: cover;
 `;
-const StyledMain = styled.div`
+const StyledMain = styled.section`
   min-height: 100vh;
   background-color: #c3d3f2;
 `;
