@@ -37,7 +37,7 @@ const SkillText = styled.p`
   line-height: 1.4;
 `;
 
-const IconWrapper = styled.div`
+export const IconWrapper = styled.div`
   position: relative;
 
   &:before {
