@@ -1,17 +1,17 @@
-import React from 'react';
-import photo from '../../../assets/img/photo.jpg';
-import styled from 'styled-components';
-import { FlexWrapper } from '../../../components/FlexWrapper';
-import { stopCoverage } from 'v8';
-import { stderr } from 'process';
-import { Container } from '../../../components/Container';
-import { theme } from '../../../styles/Theme';
+import React from "react";
+import photo from "../../../assets/img/photo.jpg";
+import styled from "styled-components";
+import { FlexWrapper } from "../../../components/FlexWrapper";
+import { stopCoverage } from "v8";
+import { stderr } from "process";
+import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify={'space-between'} align={'center'} wrap={'wrap'}>
+        <FlexWrapper justify={"space-between"} align={"center"} wrap={"wrap"}>
           <div>
             <Descrription>Hi There</Descrription>
             <Name>
@@ -33,7 +33,7 @@ const PhotoWrapper = styled.div`
   z-index: 0;
 
   &:before {
-    content: '';
+    content: "";
     width: 360px;
     height: 470px;
     border: 5px solid ${theme.colors.accent};
@@ -47,7 +47,7 @@ const PhotoWrapper = styled.div`
     @media ${theme.media.mobile} {
       width: 314px;
       height: 414px;
-      top: -10px;
+      top: -15px;
       left: 10px;
     }
   }
@@ -72,7 +72,7 @@ const MainTitle = styled.h1`
   font-size: 27px;
 `;
 const Name = styled.h2`
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
   font-size: 50px;
   letter-spacing: 0.05em;
@@ -83,7 +83,7 @@ const Name = styled.h2`
     z-index: 0;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       display: inline-block;
       bottom: 0;
