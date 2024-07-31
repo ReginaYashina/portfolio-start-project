@@ -1,19 +1,18 @@
-import React from "react";
-import photo from "../../../assets/img/photo.jpg";
-import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { stopCoverage } from "v8";
-import { stderr } from "process";
-import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/Theme";
+import React from 'react';
+import photo from '../../../assets/img/photo.jpg';
+import styled from 'styled-components';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import { Container } from '../../../components/Container';
+import { theme } from '../../../styles/Theme';
+import { font } from '../../../styles/Common';
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify={"space-between"} align={"center"} wrap={"wrap"}>
+        <FlexWrapper justify={'space-around'} align={'center'} wrap={'wrap'}>
           <div>
-            <Descrription>Hi There</Descrription>
+            <Description>Hi There</Description>
             <Name>
               I am <span>Regina Yashina</span>
             </Name>
@@ -31,9 +30,10 @@ export const Main = () => {
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 0;
+  margin-top: 65px;
 
   &:before {
-    content: "";
+    content: '';
     width: 360px;
     height: 470px;
     border: 5px solid ${theme.colors.accent};
@@ -44,11 +44,16 @@ const PhotoWrapper = styled.div`
     left: 24px;
     z-index: -1;
 
+    @media screen and (max-width: 950px) {
+      top: -18px;
+      left: 5px;
+    }
+
     @media ${theme.media.mobile} {
       width: 314px;
       height: 414px;
-      top: -15px;
-      left: 10px;
+      top: -17px;
+      left: 20px;
     }
   }
 `;
@@ -56,6 +61,7 @@ const Photo = styled.img`
   width: 350px;
   height: 430px;
   object-fit: cover;
+  margin-right: 20px;
 
   @media ${theme.media.mobile} {
     width: 310px;
@@ -68,22 +74,29 @@ const StyledMain = styled.section`
   display: flex;
 `;
 const MainTitle = styled.h1`
-  font-weight: 400;
-  font-size: 27px;
+  ${font({
+    weight: 400,
+    Fmax: 27,
+    Fmin: 20,
+  })}
 `;
 const Name = styled.h2`
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 50px;
+  ${font({
+    family: "'Josefin Sans', sans-serif",
+    weight: 700,
+    Fmax: 50,
+    Fmin: 36,
+  })}
   letter-spacing: 0.05em;
   margin: 10px 0;
 
   & span {
     position: relative;
     z-index: 0;
+    white-space: nowrap;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       display: inline-block;
       bottom: 0;
@@ -93,8 +106,12 @@ const Name = styled.h2`
       z-index: -1;
     }
   }
+
+  @media ${theme.media.mobile} {
+    margin: 15px 0 22px;
+  }
 `;
-const Descrription = styled.span`
+const Description = styled.span`
   font-weight: 400;
   font-size: 14px;
 `;
