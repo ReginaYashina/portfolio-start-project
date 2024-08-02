@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from '../../../../components/Link';
-import { theme } from '../../../../styles/Theme';
-import { Button } from '../../../../components/Button';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "../../../../components/Link";
+import { theme } from "../../../../styles/Theme";
+import { Button } from "../../../../components/Button";
 
 type WorkPropsType = {
   src: string;
@@ -45,17 +45,22 @@ const StyledWork = styled.div`
 `;
 const ImageWrapper = styled.div`
   position: relative;
+
+  &:before {
+    content: "";
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+
   &:hover {
     &:before {
-      content: '';
-      backdrop-filter: blur(8px);
-      background: rgba(0, 0, 0, 0.3);
-
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      opacity: 1;
     }
     ${Button} {
       opacity: 1;
@@ -69,9 +74,18 @@ const ImageWrapper = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     &:before {
-      content: '';
+      content: "";
       width: 100%;
       height: 100%;
+    }
+  }
+
+  @media ${theme.media.tablet} {
+    &:before {
+      opacity: 1;
+    }
+    ${Button} {
+      opacity: 1;
     }
   }
 `;
