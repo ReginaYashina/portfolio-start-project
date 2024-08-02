@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import { theme } from './Theme';
+import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
 *, 
@@ -20,6 +20,7 @@ body {
 	color:${theme.colors.font};
 	line-height: 1.2;
 
+  min-width: 360px;
 }
 
 code {

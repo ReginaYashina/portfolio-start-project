@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { theme } from '../styles/Theme';
-import { font } from '../styles/Common';
+import styled from "styled-components";
+import { theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 export const SectionTitle = styled.h2`
   ${font({
@@ -16,7 +16,7 @@ export const SectionTitle = styled.h2`
   margin-bottom: 60px;
 
   &:before {
-    content: '';
+    content: "";
     display: inline-block;
     position: absolute;
     width: 55px;
@@ -28,5 +28,6 @@ export const SectionTitle = styled.h2`
   }
   @media ${theme.media.mobile} {
     padding-bottom: 24px;
+    margin-bottom: 50px;
   }
 `;

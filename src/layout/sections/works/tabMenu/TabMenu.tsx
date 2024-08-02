@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from '../../../../components/Link';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "../../../../components/Link";
 
 export const TabMenu = (props: { menuItems: Array<string> }) => {
   return (
@@ -9,7 +9,7 @@ export const TabMenu = (props: { menuItems: Array<string> }) => {
         {props.menuItems.map((item: string, index: number) => {
           return (
             <ListItem key={index}>
-              <Link href={'#'}>{item}</Link>
+              <Link href={"#"}>{item}</Link>
             </ListItem>
           );
         })}
@@ -25,7 +25,6 @@ const StyledTabMenu = styled.nav`
     margin: 0 auto 40px;
     max-width: 352px;
     width: 100%;
-    outline: 1px dashed red;
   }
 `;
 
