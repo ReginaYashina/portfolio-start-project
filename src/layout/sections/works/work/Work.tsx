@@ -29,14 +29,18 @@ export const Work = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
   background-color: ${theme.colors.secondaryBg};
-  max-width: 540px;
-  width: 100%;
+  width: 330px;
+  flex-grow: 1;
 
   ${Link} {
     padding: 10px 0;
     & + ${Link} {
       margin: 0 20px;
     }
+  }
+
+  @media ${theme.media.desktop} {
+    max-width: 540px;
   }
 `;
 const ImageWrapper = styled.div`
@@ -75,6 +79,7 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 260px;
+  object-fit: cover;
 `;
 
 const Title = styled.h3``;
