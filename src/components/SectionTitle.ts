@@ -29,5 +29,6 @@ export const SectionTitle = styled.h2`
   @media ${theme.media.mobile} {
     padding-bottom: 24px;
     margin-bottom: 50px;
+    letter-spacing: 0.12em;
   }
 `;
