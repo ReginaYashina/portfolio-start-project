@@ -1,18 +1,18 @@
-import styled from "styled-components";
-import { theme } from "../../../styles/Theme";
-import { font } from "../../../styles/Common";
+import styled from 'styled-components'
+import { theme } from '../../../styles/Theme'
+import { font } from '../../../styles/Common'
 
 const ContentWrapper = styled.div`
   @media ${theme.media.mobile} {
     margin-top: 20px;
   }
-`;
+`
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 0;
 
   &:before {
-    content: "";
+    content: '';
     width: 360px;
     height: 470px;
     border: 5px solid ${theme.colors.accent};
@@ -38,7 +38,7 @@ const PhotoWrapper = styled.div`
   @media ${theme.media.mobile} {
     margin-top: 65px;
   }
-`;
+`
 const Photo = styled.img`
   width: 350px;
   height: 430px;
@@ -49,19 +49,22 @@ const Photo = styled.img`
     width: 310px;
     height: 380px;
   }
-`;
+`
 const Main = styled.section`
   min-height: 100vh;
   background-color: #c3d3f2;
   display: flex;
-`;
+`
 const MainTitle = styled.h1`
   ${font({
     weight: 400,
     Fmax: 27,
     Fmin: 20,
   })}
-`;
+  p {
+    display: none;
+  }
+`
 const Name = styled.h2`
   ${font({
     family: "'Josefin Sans', sans-serif",
@@ -78,7 +81,7 @@ const Name = styled.h2`
     white-space: nowrap;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       display: inline-block;
       bottom: 0;
@@ -92,11 +95,11 @@ const Name = styled.h2`
   @media ${theme.media.mobile} {
     margin: 15px 0 22px;
   }
-`;
+`
 const Description = styled.span`
   font-weight: 400;
   font-size: 14px;
-`;
+`
 
 export const S = {
   Main,
@@ -105,5 +108,5 @@ export const S = {
   Name,
   MainTitle,
   PhotoWrapper,
-  Photo
+  Photo,
 }

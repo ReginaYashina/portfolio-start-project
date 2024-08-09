@@ -1,20 +1,33 @@
-import React from "react";
-import photo from "../../../assets/img/photo.jpg";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Container } from "../../../components/Container";
-import { S } from "./Main_Styles";
+import React from 'react'
+import photo from '../../../assets/img/photo.jpg'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import { Container } from '../../../components/Container'
+import { S } from './Main_Styles'
+import Typewriter from 'typewriter-effect'
 
 export const Main: React.FC = () => {
   return (
     <S.Main>
       <Container>
-        <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
+        <FlexWrapper justify={'space-around'} align={'center'} wrap={'wrap'}>
           <S.ContentWrapper>
             <S.Description>Hi There</S.Description>
             <S.Name>
               I am <span>Regina Yashina</span>
             </S.Name>
-            <S.MainTitle>A Web Developer</S.MainTitle>
+            {/* <S.MainTitle>A Web Developer</S.MainTitle> */}
+
+            <S.MainTitle>
+              <p>A Web Developer</p>
+              <Typewriter
+                options={{
+                  strings: ['A Web Developer.', 'A Frontend Developer.'],
+                  autoStart: true,
+                  loop: true,
+                  delay: 150,
+                }}
+              />
+            </S.MainTitle>
           </S.ContentWrapper>
           <S.PhotoWrapper>
             <S.Photo src={photo} alt='photo' />
@@ -22,5 +35,5 @@ export const Main: React.FC = () => {
         </FlexWrapper>
       </Container>
     </S.Main>
-  );
-};
+  )
+}
