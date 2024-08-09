@@ -1,17 +1,17 @@
-import React from "react";
-import { Link } from "../../../../components/Link";
-import { S } from "../Works_Styles";
+import React from 'react'
+import { Link } from '../../../../components/Link'
+import { S } from '../Works_Styles'
 
-export type TabsStatusType = "all" | "landing" | "react" | "spa";
+export type TabsStatusType = 'all' | 'landing' | 'react' | 'spa'
 
 type TabMenuPropsType = {
   tabsItems: Array<{
-    status: TabsStatusType;
-    title: string;
-  }>;
-  changeFilterStatus: (value: TabsStatusType) => void;
-  currentFilterStatus: string;
-};
+    status: TabsStatusType
+    title: string
+  }>
+  changeFilterStatus: (value: TabsStatusType) => void
+  currentFilterStatus: string
+}
 
 export const TabMenu: React.FC<TabMenuPropsType> = (
   props: TabMenuPropsType
@@ -22,8 +22,8 @@ export const TabMenu: React.FC<TabMenuPropsType> = (
         {props.tabsItems.map(
           (
             item: {
-              status: TabsStatusType;
-              title: string;
+              status: TabsStatusType
+              title: string
             },
             index: number
           ) => {
@@ -31,18 +31,18 @@ export const TabMenu: React.FC<TabMenuPropsType> = (
               <S.ListItem key={index}>
                 <Link
                   active={props.currentFilterStatus === item.status}
-                  as={"button"}
+                  as={'button'}
                   onClick={() => {
-                    props.changeFilterStatus(item.status);
+                    props.changeFilterStatus(item.status)
                   }}
                 >
                   {item.title}
                 </Link>
               </S.ListItem>
-            );
+            )
           }
         )}
       </ul>
     </S.TabMenu>
-  );
-};
+  )
+}

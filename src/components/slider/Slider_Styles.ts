@@ -1,23 +1,25 @@
-import styled from "styled-components";
-import { theme } from "../../styles/Theme";
+import styled from 'styled-components'
+import { theme } from '../../styles/Theme'
 
 const Slider = styled.div`
   max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 
 const Slide = styled.div`
   text-align: center;
-`;
+  cursor: grab;
+`
 const Text = styled.p`
   @media ${theme.media.mobile} {
     line-height: 1.4;
   }
-`;
+`
 const Name = styled.span`
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.06em;
@@ -25,7 +27,7 @@ const Name = styled.span`
   text-align: center;
   margin: 27px 0 18px;
   display: inline-block;
-`;
+`
 const Pagination = styled.div`
   margin-top: 15px;
   span {
@@ -44,12 +46,12 @@ const Pagination = styled.div`
       background-color: ${theme.colors.accent};
     }
   }
-`;
+`
 
 export const S = {
   Slider,
   Slide,
   Text,
   Name,
-  Pagination
+  Pagination,
 }

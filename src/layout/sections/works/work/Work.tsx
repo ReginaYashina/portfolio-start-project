@@ -1,13 +1,13 @@
-import React from "react";
-import { Link } from "../../../../components/Link";
-import { Button } from "../../../../components/Button";
-import { S } from "../Works_Styles";
+import React from 'react'
+import { Link } from '../../../../components/Link'
+import { Button } from '../../../../components/Button'
+import { S } from '../Works_Styles'
 
 type WorkPropsType = {
-  src: string;
-  title: string;
-  text: string;
-};
+  src: string
+  title: string
+  text: string
+}
 
 export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
   return (
@@ -25,5 +25,5 @@ export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
         <Link href=''>code</Link>
       </S.Description>
     </S.Work>
-  );
-};
+  )
+}
