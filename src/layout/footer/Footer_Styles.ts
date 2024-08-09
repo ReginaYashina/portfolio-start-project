@@ -1,11 +1,12 @@
-import styled from "styled-components";
-import { theme } from "../../styles/Theme";
-import { font } from "../../styles/Common";
+import styled from 'styled-components'
+import { theme } from '../../styles/Theme'
+import { font } from '../../styles/Common'
 
 const Footer = styled.footer`
+  position: relative;
   background-color: ${theme.colors.primaryBg};
   padding: 40px 0;
-`;
+`
 const Name = styled.span`
   ${font({
     family: '"Josefin Sans", sans-serif',
@@ -14,13 +15,13 @@ const Name = styled.span`
     Fmin: 16,
   })}
   letter-spacing: 0.14em;
-`;
+`
 const SocialList = styled.ul`
   display: flex;
   margin: 30px 0;
   gap: 20px;
-`;
-const SocialItem = styled.li``;
+`
+const SocialItem = styled.li``
 const SocialLink = styled.a`
   border-radius: 50%;
   width: 35px;
@@ -39,13 +40,13 @@ const SocialLink = styled.a`
     background-color: ${theme.colors.accent};
     transform: translateY(-4px);
   }
-`;
+`
 const Copyright = styled.small`
   font-weight: 400;
   font-size: 12px;
   text-align: center;
   opacity: 0.5;
-`;
+`
 
 export const S = {
   Footer,
@@ -53,5 +54,5 @@ export const S = {
   SocialList,
   SocialItem,
   SocialLink,
-  Copyright
+  Copyright,
 }

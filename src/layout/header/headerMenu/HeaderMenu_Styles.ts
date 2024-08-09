@@ -1,14 +1,11 @@
-import styled, { css } from "styled-components";
-import { theme } from "../../../styles/Theme";
+import styled, { css } from 'styled-components'
+import { theme } from '../../../styles/Theme'
+import { Link } from 'react-scroll'
 
 // Menu
-const Link = styled.a`
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 110%;
-  color: transparent;
-`;
+const MenuItem = styled.li`
+  position: relative;
+`
 const Mask = styled.span`
   position: absolute;
   top: 0;
@@ -26,10 +23,17 @@ const Mask = styled.span`
       display: inline-block;
     }
   }
-`;
-const MenuItem = styled.li`
-  position: relative;
-  &:hover {
+`
+const NavLink = styled(Link)`
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 110%;
+  color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
     ${Mask} {
       color: ${theme.colors.font};
       transform: skewX(12deg) translateX(5px);
@@ -44,7 +48,7 @@ const MenuItem = styled.li`
     }
   }
   &::before {
-    content: "";
+    content: '';
     display: inline-block;
     height: 3px;
     background-color: ${theme.colors.accent};
@@ -55,7 +59,7 @@ const MenuItem = styled.li`
     z-index: 1;
     transform: scale(0);
   }
-`;
+`
 
 // Mobile Menu
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -83,8 +87,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     justify-content: center;
     align-items: center;
   }
-`;
-const MobileMenu = styled.nav``;
+`
+const MobileMenu = styled.nav``
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
@@ -108,7 +112,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       `}
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       display: block;
       width: 36px;
@@ -124,7 +128,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     }
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       display: block;
       width: 24px;
@@ -141,7 +145,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         `}
     }
   }
-`;
+`
 
 // Desktop Menu
 const DesktopMenu = styled.nav`
@@ -149,14 +153,14 @@ const DesktopMenu = styled.nav`
     display: flex;
     gap: 25px;
   }
-`;
+`
 
 export const S = {
-  Link,
+  NavLink,
   Mask,
   MenuItem,
   MobileMenu,
   BurgerButton,
   MobileMenuPopup,
-  DesktopMenu
+  DesktopMenu,
 }

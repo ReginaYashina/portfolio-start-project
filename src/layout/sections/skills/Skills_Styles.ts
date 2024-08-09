@@ -1,7 +1,9 @@
-import styled from "styled-components";
-import { theme } from "../../../styles/Theme";
+import styled from 'styled-components'
+import { theme } from '../../../styles/Theme'
 
-const Skills = styled.section``;
+const Skills = styled.section`
+  position: relative;
+`
 
 const Skill = styled.div`
   width: 330px;
@@ -11,20 +13,20 @@ const Skill = styled.div`
   @media ${theme.media.mobile} {
     padding: 27px 0 75px;
   }
-`;
+`
 const SkilTitle = styled.h3`
   text-transform: uppercase;
   margin: 70px 0 15px;
-`;
+`
 const SkillText = styled.p`
   text-align: center;
   line-height: 1.4;
-`;
+`
 const IconWrapper = styled.div`
   position: relative;
 
   &:before {
-    content: "";
+    content: '';
     display: inline-block;
     width: 80px;
     height: 80px;
@@ -36,7 +38,7 @@ const IconWrapper = styled.div`
     top: 50%;
     left: 50%;
   }
-`;
+`
 export const S = {
   Skills,
   Skill,

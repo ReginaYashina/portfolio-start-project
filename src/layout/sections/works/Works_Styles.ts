@@ -1,16 +1,17 @@
-import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { theme } from "../../../styles/Theme";
-import { Link } from "../../../components/Link";
-import { Button } from "../../../components/Button";
+import styled from 'styled-components'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import { theme } from '../../../styles/Theme'
+import { Link } from '../../../components/Link'
+import { Button } from '../../../components/Button'
 
 const Works = styled.section`
+  position: relative;
   ${FlexWrapper} {
     @media ${theme.media.mobile} {
       gap: 47px;
     }
   }
-`;
+`
 
 const Work = styled.div`
   background-color: ${theme.colors.secondaryBg};
@@ -27,12 +28,12 @@ const Work = styled.div`
   @media ${theme.media.desktop} {
     max-width: 540px;
   }
-`;
+`
 const ImageWrapper = styled.div`
   position: relative;
 
   &:before {
-    content: "";
+    content: '';
     backdrop-filter: blur(8px);
     background: rgba(0, 0, 0, 0.3);
     position: absolute;
@@ -59,7 +60,7 @@ const ImageWrapper = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     &:before {
-      content: "";
+      content: '';
       width: 100%;
       height: 100%;
     }
@@ -73,26 +74,26 @@ const ImageWrapper = styled.div`
       opacity: 1;
     }
   }
-`;
+`
 
 const Image = styled.img`
   width: 100%;
   height: 260px;
   object-fit: cover;
-`;
+`
 
-const Title = styled.h3``;
+const Title = styled.h3``
 
 const Text = styled.p`
   margin: 14px 0 10px;
   line-height: 1.4;
-`;
+`
 
 const Description = styled.div`
   padding: 25px 20px;
   /* display: flex;
   flex-direction: column; */
-`;
+`
 
 // TabMenu
 const TabMenu = styled.nav`
@@ -103,11 +104,9 @@ const TabMenu = styled.nav`
     max-width: 352px;
     width: 100%;
   }
-`;
+`
 
-const ListItem = styled.li``;
-
-
+const ListItem = styled.li``
 
 export const S = {
   Works,
@@ -118,5 +117,5 @@ export const S = {
   Title,
   Text,
   TabMenu,
-  ListItem
+  ListItem,
 }

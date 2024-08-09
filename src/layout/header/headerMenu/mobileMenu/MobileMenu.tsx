@@ -1,14 +1,12 @@
-import React, { useState } from "react";
-import { S } from "../HeaderMenu_Styles";
-import { Menu } from "../menu/Menu";
+import React, { useState } from 'react'
+import { S } from '../HeaderMenu_Styles'
+import { Menu } from '../menu/Menu'
 
-export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: {
-  menuItems: Array<string>;
-}) => {
-  const [menuIsOpen, setmenuIsOpen] = useState(false);
+export const MobileMenu: React.FC = () => {
+  const [menuIsOpen, setmenuIsOpen] = useState(false)
   const onBurgerBtnClick = () => {
-    setmenuIsOpen(!menuIsOpen);
-  };
+    setmenuIsOpen(!menuIsOpen)
+  }
   return (
     <S.MobileMenu>
       <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
@@ -18,8 +16,8 @@ export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: {
         isOpen={menuIsOpen}
         onClick={() => setmenuIsOpen(false)}
       >
-        <Menu menuItems={props.menuItems} />
+        <Menu />
       </S.MobileMenuPopup>
     </S.MobileMenu>
-  );
-};
+  )
+}
