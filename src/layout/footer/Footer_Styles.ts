@@ -22,6 +22,7 @@ const SocialList = styled.ul`
   gap: 20px;
 `
 const SocialItem = styled.li``
+
 const SocialLink = styled.a`
   border-radius: 50%;
   width: 35px;
@@ -31,7 +32,8 @@ const SocialLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  transition: ${theme.animations.transition};
+  
   color: ${theme.colors.accent};
   cursor: pointer;
 

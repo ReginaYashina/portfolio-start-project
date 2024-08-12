@@ -13,9 +13,8 @@ const Mask = styled.span`
   display: inline-block;
   height: 50%;
   overflow: hidden;
-  /* outline: 1px solid red; */
   color: ${theme.colors.accent};
-  transition: .2s ease-in-out;
+  transition: ${theme.animations.transition};
 
   & + & {
     top: 50%;
@@ -59,7 +58,7 @@ const NavLink = styled(Link)`
     right: -10px;
     z-index: 1;
     transform: scale(0);
-    transition: .2s ease-in-out;
+    transition:  ${theme.animations.transition};
   }
 `
 
@@ -71,24 +70,31 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: .8s ease-in-out;
+
+  ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .8s ease-in-out;
+  }
 
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      transform: translateY(0);
       z-index: 99999;
-    `}
 
-  ul {
-    display: flex;
-    gap: 25px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+      & ul{
+        gap: 40px;
+      }
+    `}
 `
 const MobileMenu = styled.nav``
 
