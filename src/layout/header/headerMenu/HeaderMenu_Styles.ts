@@ -15,6 +15,7 @@ const Mask = styled.span`
   overflow: hidden;
   /* outline: 1px solid red; */
   color: ${theme.colors.accent};
+  transition: .2s ease-in-out;
 
   & + & {
     top: 50%;
@@ -58,6 +59,7 @@ const NavLink = styled(Link)`
     right: -10px;
     z-index: 1;
     transform: scale(0);
+    transition: .2s ease-in-out;
   }
 `
 
